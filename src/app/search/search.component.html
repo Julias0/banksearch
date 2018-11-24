@@ -1,0 +1,28 @@
+<div class="jumbotron">
+  <h1>Bank Branches</h1>
+</div>
+<div class="container">
+  <form [formGroup]="fg">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="form-group">
+          <select formControlName="city" class="form-control">
+            <option value="KOLKATA">KOLKATA</option>
+            <option value="MUMBAI">MUMBAI</option>
+            <option value="DELHI">DELHI</option>
+            <option value="CHENNAI">CHENNAI</option>
+            <option value="AGRA">AGRA</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="form-group">
+          <input formControlName="search" class="form-control" type="text">
+        </div>
+      </div>
+    </div>
+  </form>
+  <div class="row col-md-12">
+    <app-branch-grid [headers]="gridHeaders" [data]="filteredData"></app-branch-grid>
+  </div>
+</div>
